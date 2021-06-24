@@ -1,5 +1,3 @@
-package Main;
-
 public class Snowboarder {
     public String name;
     public String skill;
