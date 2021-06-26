@@ -1,31 +1,16 @@
 public class Kettle extends Gadjet implements Action{
 
+    public Kettle(String name, double weight, int price, String size, String title) {
+        super(name, weight, price, size, title);
+    }
+
     @Override
     void destination() {
-        System.out.println(" очень необходим в быту.");
+        System.out.println(super.toString() + " очень необходим в быту.");
     }
-
-    @Override
-    void need() {
-        System.out.print(toString() + getName());
-        destination();
-
-    }
-
-    @Override
-    void count(String i, String w) {
-        System.out.println("Стоит " + getName() + " " + getPrice() + i + getWeight() + w + " имеет размер " + getSize());
-    }
-
 
     @Override
     public void action() {
-        System.out.print("С помощью кнопки, " + toString());
-        System.out.println(act);
-    }
-
-    @Override
-    public String toString() {
-        return "Чайник ";
+        System.out.println("С помощью кнопки включения, чайник " +  getName() + " вскипятит воду");
     }
 }

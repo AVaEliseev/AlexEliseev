@@ -1,24 +1,16 @@
-public class Toothbrush extends Gadjet {
+public class Toothbrush extends Gadjet implements Action {
+
+    public Toothbrush(String name, double weight, int price, String size, String title) {
+        super(name, weight, price, size, title);
+    }
 
     @Override
     void destination() {
-        System.out.println(" необходима каждый день, для соблюдения гигиены.");
+        System.out.println(getTitle() + " необходима каждый день, для соблюдения гигиены.");
     }
 
     @Override
-    void need() {
-        System.out.print(toString() + getName());
-        destination();
-        super.clean();
-    }
-
-    @Override
-    void count(String i, String w) {
-        System.out.println("Стоит " + getName() + " " + getPrice() + i + getWeight() + w + " имеет размер " + getSize());
-    }
-
-    @Override
-    public String toString() {
-        return "Электрическая зубная щетка ";
+    public void action() {
+        System.out.println(super.toString() + ", может с легкостью очисть зубы.");
     }
 }

@@ -1,30 +1,18 @@
 public class Mobile extends Gadjet implements Send {
 
+
+    public Mobile(String name, double weight, int price, String size, String title) {
+        super(name, weight, price, size, title);
+    }
+
     @Override
     void destination() {
-        System.out.println(" можно отправить sms: ");
-    }
-
-    @Override
-    void need() {
-        System.out.println("Телефон " + getName() + " является неотъемлемой частью, для повседневной жизни.");
-    }
-
-    @Override
-    void count(String i, String w) {
-        System.out.println("Стоит " + getName() + " " + getPrice() + i + getWeight() + w + " имеет размер " + getSize());
+        System.out.println(super.toString() + " упрощает жизнь современного человека.");
     }
 
     @Override
     public void send() {
-        System.out.print("С помощью " + toString());
-        destination();
-        System.out.print(text);
-        System.out.println(lastName);
-    }
-
-    @Override
-    public String toString() {
-        return "Mobile";
+        System.out.println(getTitle() + " " + getName() + ", может отправлять смс: ");
+        System.out.println(text + " " + lastName);
     }
 }

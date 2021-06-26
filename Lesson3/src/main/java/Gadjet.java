@@ -4,44 +4,35 @@ public abstract class Gadjet {
     private double weight;
     private int price;
     private String size;
+    private String title;
+
+    private final String currency = "$";
+    private final String metrics = "кг";
 
     abstract void destination();
-    abstract void need();
-    abstract void count(String i, String w);
 
-    public void clean(){
-        System.out.println(toString() + ", может слегкостью очисть зубы.");
+    public Gadjet(String name, double weight, int price, String size, String title) {
+        this.name = name;
+        this.weight = weight;
+        this.price = price;
+        this.size = size;
+        this.title = title;
+    }
+
+    void count() {
+        System.out.println("Стоит " + title + " " + name + " " + price + currency + ", его вес " + weight + " " + metrics + " имеет размер " + size);
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getTitle() {
+        return title;
     }
 
-    public double getWeight() {
-        return weight;
-    }
-
-    public void setWeight(double weight) {
-        this.weight = weight;
-    }
-
-    public int getPrice() {
-        return price;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
-    }
-
-    public String getSize() {
-        return size;
-    }
-
-    public void setSize(String size) {
-        this.size = size;
+    @Override
+    public String toString() {
+        return "Этот гаджет";
     }
 }
