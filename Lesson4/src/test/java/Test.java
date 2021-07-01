@@ -23,12 +23,7 @@ public class Test {
 //        toothbrush.count();
 //        System.out.println("//////////////////////////////////////////////////////////////////////////////////////////");
 //
-        List listGadjet = new ArrayList();
-        listGadjet.add(toothbrush);
-        listGadjet.add(toothbrush2);
-        listGadjet.add(mobile);
-        listGadjet.add(mobile2);
-        listGadjet.add(kettle);
+        List<Gadjet> listGadjet = new ArrayList<>(Arrays.asList(toothbrush, toothbrush2, mobile, mobile2, kettle));
         System.out.println(listGadjet);
 
         Set<Gadjet> setGadjet = new HashSet<>(listGadjet);
