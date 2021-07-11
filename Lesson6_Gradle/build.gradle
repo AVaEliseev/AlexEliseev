@@ -1,0 +1,64 @@
+import sun.security.krb5.internal.ccache.Tag
+
+import javax.swing.text.html.HTML
+
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-params', version: '5.8.0-M1'
+}
+
+test {
+    useJUnitPlatform()
+    maxParallelForks = 2
+//  падаем при первом тесте
+    failFast = true
+
+//    ignoreFailures = true
+//    filter {
+//        includeTestsMatching "*.*"
+//        includeTest "org.gradle.SomeTest", "someTestMethod"
+}
+
+task Adition {
+
+}
+
+
+task hello {
+    doLast {
+        println 'Hello'
+    }
+}
+
+task world {
+    dependsOn tasks.hello
+    doLast {
+        println 'World'
+    }
+}
+
+tasks.withType(Test){
+    testLogging {
+        exceptionFormat "full"
+        events "started", "skipped", "passed", "failed"
+        showStandardStreams true
+    }
+}
+
+tasks.register('copy', Copy)
+        {
+            from(file('src'))
+            into(buildDir)
+        }

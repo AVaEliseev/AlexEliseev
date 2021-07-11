@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestMethodCalc" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-07-11T09:45:05" hostname="DESKTOP-V7HD0OD" time="0.019">
+  <properties/>
+  <testcase name="repetition 1 of 2" classname="TestMethodCalc" time="0.016"/>
+  <testcase name="repetition 2 of 2" classname="TestMethodCalc" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
