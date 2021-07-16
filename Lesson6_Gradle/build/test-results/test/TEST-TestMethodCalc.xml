@@ -1,8 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestMethodCalc" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-07-11T09:45:05" hostname="DESKTOP-V7HD0OD" time="0.019">
+<testsuite name="TestMethodCalc" tests="16" skipped="0" failures="0" errors="0" timestamp="2021-07-16T16:43:05" hostname="DESKTOP-V7HD0OD" time="0.098">
   <properties/>
-  <testcase name="repetition 1 of 2" classname="TestMethodCalc" time="0.016"/>
-  <testcase name="repetition 2 of 2" classname="TestMethodCalc" time="0.001"/>
+  <testcase name="1 first=6, second=3, expected=3" classname="TestMethodCalc" time="0.037"/>
+  <testcase name="2 first=6, second=2, expected=4" classname="TestMethodCalc" time="0.002"/>
+  <testcase name="3 first=18, second=4, expected=14" classname="TestMethodCalc" time="0.002"/>
+  <testcase name="4 first=10, second=5, expected=5" classname="TestMethodCalc" time="0.002"/>
+  <testcase name="1 first=10, second=15, expected=25" classname="TestMethodCalc" time="0.002"/>
+  <testcase name="2 first=6, second=10, expected=16" classname="TestMethodCalc" time="0.002"/>
+  <testcase name="3 first=0, second=4, expected=4" classname="TestMethodCalc" time="0.003"/>
+  <testcase name="4 first=1, second=5, expected=6" classname="TestMethodCalc" time="0.001"/>
+  <testcase name="1 first=9, second=3, expected=3" classname="TestMethodCalc" time="0.001"/>
+  <testcase name="2 first=6, second=2, expected=3" classname="TestMethodCalc" time="0.001"/>
+  <testcase name="3 first=8, second=4, expected=2" classname="TestMethodCalc" time="0.001"/>
+  <testcase name="4 first=10, second=5, expected=2" classname="TestMethodCalc" time="0.001"/>
+  <testcase name="1 first=1, second=3, expected=3" classname="TestMethodCalc" time="0.001"/>
+  <testcase name="2 first=6, second=2, expected=12" classname="TestMethodCalc" time="0.0"/>
+  <testcase name="3 first=8, second=4, expected=32" classname="TestMethodCalc" time="0.001"/>
+  <testcase name="4 first=10, second=5, expected=50" classname="TestMethodCalc" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

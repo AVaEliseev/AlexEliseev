@@ -20,21 +20,16 @@ dependencies {
 }
 
 test {
-    useJUnitPlatform()
+    useJUnitPlatform {
+    }
     maxParallelForks = 2
 //  падаем при первом тесте
     failFast = true
-
-//    ignoreFailures = true
-//    filter {
+    ignoreFailures = true
+//      filter {
 //        includeTestsMatching "*.*"
 //        includeTest "org.gradle.SomeTest", "someTestMethod"
 }
-
-task Adition {
-
-}
-
 
 task hello {
     doLast {
@@ -49,7 +44,7 @@ task world {
     }
 }
 
-tasks.withType(Test){
+tasks.withType(Test) {
     testLogging {
         exceptionFormat "full"
         events "started", "skipped", "passed", "failed"
@@ -61,4 +56,24 @@ tasks.register('copy', Copy)
         {
             from(file('src'))
             into(buildDir)
+        }
+
+tasks.register('Addition', Test)
+        {
+            useJUnitPlatform { includeTags("Addition") }
+        }
+
+tasks.register('Subtraction', Test)
+        {
+            useJUnitPlatform { includeTags("Subtraction") }
+        }
+
+tasks.register('Division', Test)
+        {
+            useJUnitPlatform { includeTags("Division") }
+        }
+
+tasks.register('Multiply', Test)
+        {
+            useJUnitPlatform { includeTags("Multiply") }
         }
