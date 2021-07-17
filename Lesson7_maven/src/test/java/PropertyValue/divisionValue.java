@@ -1,3 +1,5 @@
+package PropertyValue;
+
 public class divisionValue {
     @org.testng.annotations.DataProvider(name = "divisionValue")
     public static Object [][] divisionValueMethod(){

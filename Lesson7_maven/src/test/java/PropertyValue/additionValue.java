@@ -1,3 +1,5 @@
+package PropertyValue;
+
 public class additionValue {
     @org.testng.annotations.DataProvider(name = "additionValue")
     public static Object [][] additionValueMethod(){
