@@ -1,0 +1,13 @@
+<suite name="Suite1" >
+    <test name="TestCalculator" >
+        <classes>
+            <class name="TestCalculator" />
+        </classes>
+    </test>
+
+    <test name="TestMethodCalc">
+        <classes>
+            <class name="TestMethodCalc"/>
+        </classes>
+    </test>
+</suite>
