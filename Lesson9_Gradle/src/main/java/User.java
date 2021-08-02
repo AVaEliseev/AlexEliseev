@@ -93,7 +93,7 @@ public class User implements Serializable {
     }
 
     private LocalDate generateRandomBirthDay() {
-        final int maxDaysAgeFromNow = (MAX_AGE_FOR_USER - MIN_AGE_FOR_REGISTRATION) * 12 * 31;
+        final int maxDaysAgeFromNow = (MAX_AGE_FOR_USER - MIN_AGE_FOR_REGISTRATION) * 12 * 30;
         return LocalDate.now().minusYears(MIN_AGE_FOR_REGISTRATION).minusDays(new Random().nextInt(maxDaysAgeFromNow));
     }
 

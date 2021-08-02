@@ -50,8 +50,9 @@ public class FileUtils {
         try {
             s= new FileInputStream(fileName);
             ois = new ObjectInputStream(s);
+            Object obj = ois.readObject();
             ois.close();
-            return ois.readObject();
+            return obj;
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
